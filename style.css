@@ -664,6 +664,70 @@ section {
 
 /* Team */
 /* TEAM PHOTOS + HOVER EFFECT */
+/* HEADS SECTION */
+.heads-section {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.heads-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: 1.5rem;
+  color: var(--accent-yellow);
+  text-shadow: 0 0 12px rgba(255, 221, 0, 0.4);
+}
+
+.heads-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 750px) {
+  .heads-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.head-card {
+  background: linear-gradient(145deg, #1a1a25, #0a0a12);
+  border: 1px solid rgba(255, 221, 0, 0.35);
+  border-radius: 1.3rem;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  transition: 0.35s ease;
+  box-shadow: 0 0 18px rgba(255, 221, 0, 0.12);
+}
+
+.head-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 28px rgba(255, 221, 0, 0.35);
+}
+
+.head-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border: 3px solid rgba(255, 221, 0, 0.5);
+  box-shadow: 0 0 20px rgba(255, 221, 0, 0.35);
+}
+
+.head-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.head-role {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--accent-muted);
+  letter-spacing: 0.16em;
+}
+
 .team-card {
   background: var(--card-bg);
   border-radius: 1.2rem;
