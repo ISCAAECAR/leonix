@@ -664,10 +664,28 @@ section {
 
 /* Team */
 /* TEAM PHOTOS + HOVER EFFECT */
-/* HEADS SECTION */
+/* HEADS SECTION – SPECIAL LEADERSHIP BLOCK */
 .heads-section {
   margin-bottom: 3rem;
   text-align: center;
+  position: relative;
+}
+
+/* subtle round watermark behind cards */
+.heads-section::after {
+  content: "";
+  position: absolute;
+  inset: 20% 10% auto 10%;
+  max-width: 420px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 216, 0, 0.12), transparent 65%);
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(2px);
+  left: 0;
+  right: 0;
 }
 
 .heads-title {
@@ -694,15 +712,44 @@ section {
   background: linear-gradient(145deg, #1a1a25, #0a0a12);
   border: 1px solid rgba(255, 221, 0, 0.35);
   border-radius: 1.3rem;
-  padding: 1.6rem 1rem;
+  padding: 1.8rem 1.2rem 1.4rem;
   text-align: center;
-  transition: 0.35s ease;
+  transition: 0.4s ease;
   box-shadow: 0 0 18px rgba(255, 221, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* animated glow */
+@keyframes headGlow {
+  0% {
+    box-shadow: 0 0 14px rgba(255, 221, 0, 0.18);
+    border-color: rgba(255, 221, 0, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(255, 221, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(255, 221, 0, 0.18);
+    border-color: rgba(255, 221, 0, 0.35);
+  }
 }
 
 .head-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 28px rgba(255, 221, 0, 0.35);
+  animation: headGlow 1.4s ease-in-out infinite;
+}
+
+/* Crown icon */
+.head-crown {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.6rem;
+  font-size: 1.1rem;
+  color: var(--accent-yellow);
+  text-shadow: 0 0 8px rgba(255, 221, 0, 0.7);
+  opacity: 0.9;
 }
 
 .head-photo {
@@ -711,8 +758,8 @@ section {
   border-radius: 100px;
   object-fit: cover;
   margin: 0 auto 1rem auto;
-  border: 3px solid rgba(255, 221, 0, 0.5);
-  box-shadow: 0 0 20px rgba(255, 221, 0, 0.35);
+  border: 3px solid rgba(255, 221, 0, 0.6);
+  box-shadow: 0 0 22px rgba(255, 221, 0, 0.4);
 }
 
 .head-name {
@@ -727,6 +774,7 @@ section {
   color: var(--accent-muted);
   letter-spacing: 0.16em;
 }
+
 
 .team-card {
   background: var(--card-bg);
