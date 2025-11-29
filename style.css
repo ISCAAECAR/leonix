@@ -663,23 +663,37 @@ section {
 }
 
 /* Team */
-.team-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-@media (min-width: 800px) {
-  .team-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
+/* TEAM PHOTOS + HOVER EFFECT */
 .team-card {
   background: var(--card-bg);
   border-radius: 1.2rem;
   border: 1px solid var(--border-subtle);
-  padding: 1.1rem 1.2rem;
-  font-size: 0.86rem;
+  padding: 1.4rem 1.3rem 1.6rem;
+  text-align: center;
+  transition: 0.35s ease;
+  position: relative;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  border-color: var(--accent-yellow);
+}
+
+.team-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border: 3px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 20px rgba(0,0,0,0.45);
+}
+
+.team-name {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
 }
 
 .team-role {
@@ -690,14 +704,21 @@ section {
   margin-bottom: 0.25rem;
 }
 
-.team-name {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-
 .team-desc {
   color: var(--accent-muted);
-  font-size: 0.84rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.team-grid {
+  display: grid;
+  gap: 1.8rem;
+}
+
+@media (min-width: 750px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Gallery and Race info */
