@@ -961,4 +961,27 @@ footer span {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+.visits-box {
+  margin-top: 0.9rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(10,10,20,0.8);
+}
+
+.visits-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-muted);
+}
+
+.visits-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-yellow);
+}
 
