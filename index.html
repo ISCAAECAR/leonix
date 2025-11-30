@@ -29,7 +29,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="nav-burger">
+      <div class="nav-burger" id="nav-toggle">
         <span></span>
         <span></span>
         <span></span>
@@ -584,6 +584,18 @@
     localStorage.setItem(KEY, count);
     el.textContent = count.toLocaleString();
   })();
+</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (!navToggle || !navLinks) return;
+
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('nav-open');
+    });
+  });
 </script>
 </body>
 </html>
