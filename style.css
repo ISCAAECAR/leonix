@@ -1003,6 +1003,12 @@ footer span {
     display: flex; /* shown when burger is tapped */
   }
 }
+#webcounter {
+  height: 22px;
+  filter: invert(1) brightness(2);
+  background: transparent !important;
+  border: none !important;
+}
 
 
 
