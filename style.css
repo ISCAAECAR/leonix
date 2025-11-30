@@ -982,5 +982,27 @@ footer span {
 .visits-badge {
   height: 20px;
 }
+@media (max-width: 899px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 1.5rem;
+    margin-top: 0.4rem;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.7rem 0.9rem;
+    background: rgba(5, 5, 12, 0.96);
+    border-radius: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    display: none; /* hidden by default on mobile */
+    z-index: 100;
+  }
+
+  .nav-links.nav-open {
+    display: flex; /* shown when burger is tapped */
+  }
+}
+
 
 
