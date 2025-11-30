@@ -555,10 +555,36 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <span>Leonix EVGP Racing · Student Engineering Project</span>
+<footer>
+  <div class="container">
+    <span>Leonix EVGP Racing · Student Engineering Project</span>
+
+    <div class="visits-box">
+      <span class="visits-label">Site Visitors</span>
+      <span class="visits-value" id="visitor-count">—</span>
     </div>
-  </footer>
+  </div>
+</footer>
+
+<script>
+  // Simple visitor counter using countapi.xyz (public free API)
+  (function() {
+    const counterElement = document.getElementById('visitor-count');
+    // You can change "leonix-evgp-website" to any unique key
+    const NAMESPACE = 'leonix-evgp';
+    const KEY = 'leonix-evgp-website';
+
+    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+      .then(response => response.json())
+      .then(data => {
+        counterElement.textContent = data.value.toLocaleString();
+      })
+      .catch(err => {
+        console.error('Visitor counter error:', err);
+        counterElement.textContent = 'N/A';
+      });
+  })();
+</script>
+
 </body>
 </html>
