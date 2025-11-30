@@ -561,30 +561,16 @@
 
     <div class="visits-box">
       <span class="visits-label">Site Visitors</span>
-      <span class="visits-value" id="visitor-count">—</span>
+
+      <img
+        class="visits-badge"
+        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://iscaaecar.github.io/leonix/&title=Visitors&edge_flat=false"
+        alt="Visitor Counter"
+      />
     </div>
   </div>
 </footer>
 
-<script>
-  // Simple visitor counter using countapi.xyz (public free API)
-  (function() {
-    const counterElement = document.getElementById('visitor-count');
-    // You can change "leonix-evgp-website" to any unique key
-    const NAMESPACE = 'leonix-evgp';
-    const KEY = 'leonix-evgp-website';
-
-    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
-      .then(response => response.json())
-      .then(data => {
-        counterElement.textContent = data.value.toLocaleString();
-      })
-      .catch(err => {
-        console.error('Visitor counter error:', err);
-        counterElement.textContent = 'N/A';
-      });
-  })();
-</script>
 
 </body>
 </html>
