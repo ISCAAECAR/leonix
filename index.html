@@ -561,14 +561,33 @@
 
     <div class="visits-box">
       <span class="visits-label">Site Visitors</span>
-      <img
-        class="visits-badge"
-        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fiscaaecar.github.io%2Fleonix%2F&count_bg=%23ffd800&title_bg=%23101018&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false"
-        alt="Visitor Counter"
-      />
+      <span class="visits-value" id="visitor-count">0</span>
     </div>
   </div>
 </footer>
+
+<script>
+  // Simple per-browser visitor counter using localStorage
+  (function () {
+    const el = document.getElementById('visitor-count');
+    if (!el) return;
+
+    const KEY = 'leonix-visitor-count';
+    let count = localStorage.getItem(KEY);
+
+    if (!count) {
+      count = 1;
+    } else {
+      count = parseInt(count, 10) + 1;
+    }
+
+    localStorage.setItem(KEY, count);
+    el.textContent = count.toLocaleString();
+  })();
+</script>
+</body>
+</html>
+
 
 
 
