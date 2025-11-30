@@ -964,7 +964,7 @@ footer span {
 .visits-box {
   margin-top: 0.9rem;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.4rem;
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
@@ -979,9 +979,8 @@ footer span {
   color: var(--accent-muted);
 }
 
-.visits-value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--accent-yellow);
+.visits-badge {
+  height: 20px;
 }
+
 
