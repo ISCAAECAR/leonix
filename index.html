@@ -77,15 +77,32 @@
         <div>
           <div class="hero-car-card">
             <div class="hero-tag">LEONIX · #EVGP</div>
-            <div class="car-silhouette">
-              <div class="car-body"></div>
-              <div class="car-stripe"></div>
-              <div class="car-cockpit"></div>
-              <div class="car-wheel front"></div>
-              <div class="car-wheel rear"></div>
-              <div class="car-ground"></div>
-              <div class="car-glow"></div>
-            </div>
+<div class="car-photo-wrap">
+  <img
+    class="car-photo"
+    src="gallery/hero-car.jpg"
+    alt="LEONIX EVGP car blueprint design"
+  />
+
+  <!-- Animated drivetrain line -->
+  <svg
+    class="drive-overlay"
+    viewBox="0 0 1000 563"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <!-- Glow underlay -->
+    <path
+      class="drive-path drive-glow"
+      d="M120 390 C260 390, 360 390, 470 390 S680 390, 880 390"
+    />
+    <!-- Main drivetrain line -->
+    <path
+      class="drive-path drive-line"
+      d="M120 390 C260 390, 360 390, 470 390 S680 390, 880 390"
+    />
+  </svg>
+</div>
             <div class="car-text">
               <div>
                 <div class="car-name">Leonix E-Car</div>
