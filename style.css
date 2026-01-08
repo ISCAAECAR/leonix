@@ -842,45 +842,7 @@ section {
   border: 3px solid rgba(255, 221, 0, 0.6);
   box-shadow: 0 0 22px rgba(255, 221, 0, 0.4);
 }
-.team-icon {
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 1rem auto;
-  border-radius: 999px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: radial-gradient(circle at top, #1f1f2f, #07070d);
-  border: 3px solid rgba(255,255,255,0.14);
-  box-shadow: 0 0 22px rgba(0,0,0,0.55);
-}
-
-.team-icon svg {
-  width: 48px;
-  height: 48px;
-  fill: none;
-  stroke: var(--text-main);
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* Accent colors */
-.team-icon.drivers { border-color: var(--accent-yellow); }
-.team-icon.media { border-color: var(--accent-red); }
-.team-icon.mechanical { border-color: #a8a8c8; }
-.team-icon.innovation { border-color: var(--accent-yellow); }
-.team-icon.safety { border-color: #ffd800aa; }
-.team-icon.electrical { border-color: var(--accent-red); }
-.team-icon.docs { border-color: #a8a8c8; }
-
-/* Hover effect */
-.team-card:hover .team-icon {
-  transform: scale(1.05);
-  box-shadow: 0 0 28px rgba(255,216,0,0.35);
-}
 
 .head-name {
   font-size: 1.05rem;
